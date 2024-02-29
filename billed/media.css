@@ -463,6 +463,10 @@
 }
 
 @media screen and (max-width: 414px) {
+    body .menu {
+        width: 90%;
+    }
+    
     .img-ctn .vector-one {
         top: 90px;
         left: 23px;
