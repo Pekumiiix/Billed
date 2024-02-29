@@ -1,0 +1,512 @@
+/*@media screen and (max-width: 1580px) {
+    .home-det-ctn {
+        width: 500px;
+    }
+
+    .home-header {
+        text-align: center;
+    }
+
+    .img-ctn .vector-one {
+        left: 28px;
+    }
+
+    .home-det-ctn .home-header {
+        text-align: left;
+    }
+
+    .feedback-det-ctn {
+        width: 60%;
+    }
+
+    .feedback-det-ctn .vector-four {
+        right: 30px;
+    }
+
+    .slider-buttons {
+        top: 250px;
+    }
+
+    .steps-img-ctn img {
+        left: 27px;
+    }
+
+    .vector-five {
+        left: 0px;
+    }
+
+    .get-app-ctn .home-description {
+        width: 75%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .vector-five {
+        left: 20px;
+    }
+}*/
+
+@media screen and (max-width: 1024px) {
+    .home-det-ctn {
+        width: 450px;
+    }
+
+    .automate-det-ctn .home-header, .feedback-det-ctn .home-header, .feedback-det-ctn .home-description, .steps-det-ctn .home-header {
+        text-align: left;
+    }
+
+    .trust-img-ctn {
+        width: 85%;
+    }
+
+    .automated, .get-app-ctn {
+        width: 85%;
+    }
+
+    .feedback {
+        height: fit-content;
+    }
+
+    .feedback-det-ctn {
+        width: 55%;
+        margin-top: 75px;
+        margin-left: 7.5%;
+    }
+
+    .steps-det-ctn {
+        width: 435px;
+    }
+
+    .steps-img-ctn {
+        width: 335px;
+    }
+
+    .get-app-ctn .home-header {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .vector-four {
+        right: 11%;
+    }
+}
+
+@media screen and (max-width: 935px) {
+    .home-det-ctn {
+        width: 80%;
+        align-items: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .home-det-ctn .home-description {
+        text-align: center;
+    }
+
+    .img-ctn {
+        margin-top: 0px;
+        width: 60%;
+        margin-bottom: 75px;
+    }
+
+    .img-ctn .vector-one {
+        top: 65px;
+        left: 17%;
+    }
+
+    .human-illus {
+        width: 90%;
+        height: 85%;
+    }
+
+    .trusted .home-description {
+        width: 80%;
+        text-align: center;
+    }
+
+    .automate-det-ctn, .automated .automate-image-ctn {
+        width: 70%;
+    }
+
+    .vector-four {
+        top: -5px;
+        left: 415px;
+    }
+
+    .feedback-det-ctn {
+        width: 60%;
+    }
+
+    .steps-det-ctn {
+        width: 70%;
+        margin-bottom: 20px;
+    }
+
+    .steps-img-ctn {
+        width: 50%;
+    }
+
+    .steps-img-ctn img {
+        margin-left: 7px;
+    }
+
+    .get-app-ctn .home-header {
+        width: 81%;
+    }
+
+    .footer-content {
+        width: 60%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 876px) {
+    .img-ctn .vector-one {
+        left: 15%;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .img-ctn .vector-one {
+        left: 63px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-mid {
+        display: none;
+    }
+
+    nav .nav-right i {
+        display: flex;
+    }
+
+    .menu .sign-in {
+        margin-bottom: 20px;
+    }
+
+    .menu .create-acct {
+        display: none;
+    }
+
+    .img-ctn .vector-one {
+        top: 65px;
+        left: 10%;
+    }
+
+    .feedback-det-ctn {
+        width: 60%;
+    }
+
+    .get-app-ctn .home-header {
+        width: 84%;
+    }
+}
+
+@media screen and (max-width: 757px) {
+    .home-det-ctn .home-header {
+        text-align: center;
+    }
+
+    .img-ctn .vector-one {
+        top: 65px;
+        left: 9%;
+    }
+
+    .steps-img-ctn {
+        width: 60%;
+    }
+
+    .get-app-ctn .home-description {
+        width: 80%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 715px) {
+    .img-ctn .vector-one {
+        top: 65px;
+        left: 7%;
+    }
+
+    .feedback-det-ctn {
+        width: 80%;
+    }
+
+    .feedback-det-ctn .home-header, .feedback-det-ctn .home-description {
+        text-align: center;
+    }
+
+    .vector-four {
+        left: 95%;
+    }
+
+    .feedback .slider-buttons {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-left: 69%;
+        width: fit-content;
+    }
+}
+
+@media screen and (max-width: 702px) {
+    .img-ctn .vector-one {
+        top: 15%;
+    }
+
+    .feedback-det-ctn .vector-four {
+        left: 87%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .feedback-det-ctn .vector-four {
+        left: 90%;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .img-ctn .vector-one {
+        top: 17%;
+    }
+}
+
+@media screen and (max-width: 605px) {
+    .feedback-det-ctn {
+        padding-right: 15px;
+    }
+
+    .feedback-det-ctn .vector-four {
+        left: 93%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    nav .sign-in {
+        display: none;
+    }
+     
+    .home-det-ctn .home-header {
+        text-align: center;
+    }
+
+    .img-ctn {
+        width: 85%;
+    }
+
+    .img-ctn .vector-one {
+        top: 13%;
+        left: 9%;
+    }
+
+    .automate-det-ctn {
+        width: 85%;
+    }
+
+    .automated .automate-image-ctn {
+        width: 85%;
+    }
+
+    .merchant-det-ctn {
+        width: 85%;
+    }
+
+    .merchant-icon-ctn {
+        width: 90%;
+    }
+
+    .feedback-det-ctn {
+        width: 85%;
+    }
+
+    .steps-det-ctn .home-header, .steps-det-ctn .home-description {
+        text-align: center;
+    }
+
+    /*.vector-four {
+        left: 93%;
+    }*/
+
+    /*.feedback .slider-buttons {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-left: 69%;
+        width: fit-content;
+    }*/
+
+    .card {
+        width: 400px;
+    }
+
+    .steps-det-ctn {
+        width: 85%;
+        margin-bottom: -30px;
+    }
+
+    .steps-img-ctn {
+        width: 80%;
+        margin-bottom: 50px;
+    }
+
+    .vector-five {
+        top: -14px;
+        left: -10px;
+    }
+
+    .get-app-ctn .home-header {
+        width: 95%;
+        font-size: 33px;
+    }
+
+    .get-app-ctn .home-description {
+        text-align: center;
+        width: 85%;
+    }
+
+    .app-store img {
+        width: 170px;
+    }
+
+    .row-left {
+        width: 80%;
+    }
+
+    .row-img-ctn {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 478px) {
+    .nav-right .create-acct {
+        display: none;
+    }
+
+    .menu .sign-in {
+        margin-bottom: 0;
+    }
+
+    .menu .create-acct {
+        display: block;
+    }
+
+    .home-det-ctn {
+        width: 90%;
+    }
+
+    .img-ctn .vector-one {
+        top: 85px;
+        left: 23px;
+    }
+
+    .trusted {
+        height: fit-content;
+    }
+
+    .trusted .home-header {
+        width: 90%;
+        margin-top: 50px;
+    }
+
+    .trusted .trust-img-ctn {
+        margin-bottom: 70px;
+    }
+
+    .automate-det-ctn {
+        width: 95%;
+        margin: 0;
+    }
+
+    .automated .automate-image-ctn {
+        width: 95%;
+    }
+
+    .feedback .slider-buttons {
+        left: -10%;
+    }
+
+    .feedback .slider {
+        margin-left: 5%;
+    }
+
+    .slider .card {
+        width: 350px;
+    }
+
+    .steps-det-ctn, .steps-img-ctn {
+        width: 90%;
+    }
+
+    .vector-five {
+        left: 50px;
+    }
+
+    .get-app-ctn {
+        height: 500px;
+    }
+
+    .get-app-ctn .home-header {
+        margin-top: 20px;
+    }
+
+    .app-store {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .app-store img {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .img-ctn .vector-one {
+        top: 90px;
+        left: 23px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    /*.home .home-det-ctn {
+        background-color: red;
+    }*/
+
+    .home-det-ctn .home-header {
+        margin: 0;
+    }
+
+    .home-header {
+        font-size: 30px;
+    }
+
+    .home-description {
+        font-size: 24px;
+    }
+
+    .menu {
+        width: 300px;
+    }
+
+    .img-ctn .vector-one {
+        top: 20%;
+        left: 23px;
+    }
+
+    .get-app-ctn {
+        height: 600px;
+    }
+
+    .vector-five {
+        left: 30px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .img-ctn .vector-one {
+        top: 110px;
+        left: 23px;
+    }
+}

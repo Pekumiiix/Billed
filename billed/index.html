@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/Group 27085.svg" type="image/x-icon">
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="media.css">
+    <script src="index.js" defer></script>
+    <!--<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js" defer></script>-->
+    <script src="https://kit.fontawesome.com/d2685faf17.js" crossorigin="anonymous"></script>
+    <title>Billed</title>
+</head>
+<body>
+    <!-----------------------------------Header---------------------------------------->
+    <header class="w-100 d-flex">
+    <!--------------------------------Navigation Bar---------------------------------->
+        <nav class="navbar d-flex justify-content-between w-100">
+            <!-----------The left section of the navigation bar-->
+            <div class="nav-left d-flex align-items-center gap-2">
+                <img src="img/Group 27085.svg" alt="Logo">
+                <p class="mb-0 fw-bold" tabindex="0"
+                   aria-label="Billed"
+                >Billed</p>
+            </div>
+            <!----------The middle section of the navigation bar------------------>
+            <div class="nav-mid align-items-center gap-4">
+                <p class="mb-0 p-1 rounded-3" tabindex="0" aria-label="Bills">Bills</p>
+                <p class="mb-0  p-1 rounded-3" tabindex="0" aria-label="Payment">Payment</p>
+                <p class="mb-0  p-1 rounded-3" tabindex="0" aria-label="Budget">Budget</p>
+                <p class="mb-0  p-1 rounded-3" tabindex="0" aria-label="Blog">Blog</p>
+            </div>
+            <!----------------------The right section of the navigation bar---------------->
+            <div class="nav-right navbar-brand d-flex align-items-center gap-3">
+                <button class="sign-in border-0 bg-transparent fw-medium" tabindex="0"
+                        role="button" aria-label="Sign In"
+                >Sign In</button>
+                <button class="create-acct border-0 text-light py-2 px-3 rounded-5 fw-medium" tabindex="0"
+                        role="button" aria-label="create account"
+                >Create account</button>
+                <i class="fa-solid fa-bars fa-2x menu-button p-1 rounded-3" style="color: #950FAB;" tabindex="0"></i>
+            </div>
+        </nav>
+    </header>
+    <div class="menu position-absolute flex-column gap-3 rounded-3">
+        <p class="mb-0 p-2 rounded-3" tabindex="0" aria-label="Bills">Bills</p>
+        <p class="mb-0 p-2 rounded-3" tabindex="0" aria-label="Payment">Payment</p>
+        <p class="mb-0 p-2 rounded-3" tabindex="0" aria-label="Budget">Budget</p>
+        <p class="mb-0 p-2 rounded-3" tabindex="0" aria-label="Blog">Blog</p>
+        <button class="sign-in border-0" tabindex="0"
+                role="button" aria-label="Sign In"
+        >Sign In</button>
+        <button class="create-acct border-0 text-light py-2 px-3" tabindex="0"
+                role="button" aria-label="create account"
+        >Create account</button>
+    </div>
+    <!---------------------------------Home page------------------------------------------->
+    <section class="home w-100 d-flex flex-wrap gap-5 align-items-center justify-content-center">
+        <!-------------------------------Home details container----------------------->
+        <div class="home-det-ctn rounded-2 d-flex flex-column justify-content-center">
+            <p class="home-headline px-3 py-2 mt-5 ms-3" tabindex="0"
+               aria-label="Modern bills management"
+            >Modern bills management</p>
+            <p class="home-header fw-bold rounded-3 m-0 ms-3 p-1" tabindex="0"
+               aria-label="Your bils payment automated"
+            >Your Bills Payment Automated</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="304" height="16" viewBox="0 0 304 16" fill="none">
+                <path d="M257 5.0247C249.164 4.8545 241.314 4.69976 233.457 4.63787C225.6 4.57597 217.722 4.57986 209.809 4.78102C205.852 4.88159 201.888 5.02085 197.889 5.26456C196.303 5.36127 194.711 5.47731 193.111 5.62431C191.734 4.79338 190.081 4.1122 188.241 3.61665C184.221 2.50257 180.165 1.9958 176.151 1.59349C172.168 1.22998 168.151 0.985923 164.118 0.862396C160.133 0.719268 156.134 0.665106 152.135 0.711526C144.117 0.789749 136.135 1.31993 128.316 2.29366C121.542 3.12247 114.994 4.42935 108.836 6.18135C108.33 5.7098 107.7 5.28106 106.968 4.90866C106.145 4.49761 105.24 4.13822 104.271 3.83714C102.438 3.28012 100.493 2.84257 98.4737 2.53349C96.5278 2.22436 94.5493 1.98022 92.5491 1.8024C90.5743 1.61672 88.5853 1.48906 86.6246 1.38848C84.6639 1.28791 82.682 1.19507 80.7142 1.12157C76.7645 0.990045 72.8148 0.920414 68.8651 0.95136C60.9896 1.00109 53.1292 1.33968 45.3367 1.96486C37.5461 2.57918 29.8325 3.45638 22.2401 4.59145C14.644 5.70658 7.21011 7.12889 0 8.84661L0.26898 9.16382C7.51981 7.57333 14.9774 6.28031 22.5799 5.29549C30.1566 4.27875 37.8421 3.52167 45.5915 3.02865C53.3233 2.52626 61.1082 2.30915 68.8934 2.37878C72.7794 2.40585 76.6795 2.53351 80.523 2.71919C82.4554 2.81977 84.3808 2.92033 86.3061 3.06733C88.2314 3.21432 90.1354 3.34586 92.0112 3.54315C93.8712 3.74064 95.7077 3.999 97.511 4.31681C99.2555 4.60695 100.933 5.00676 102.508 5.50824C103.818 5.90745 104.916 6.48602 105.694 7.18711C103.99 7.76384 102.369 8.41042 100.845 9.12127C100.017 9.51259 99.2478 9.93946 98.5445 10.3978C98.1517 10.6538 97.8012 10.9282 97.4969 11.2179C97.0804 11.6056 96.8378 12.0418 96.7891 12.4906C96.7822 12.6665 96.8179 12.8421 96.8952 13.0128C96.9946 13.2139 97.1628 13.4029 97.3907 13.5699C97.7926 13.859 98.3492 14.0726 98.9833 14.1811C99.3984 14.2521 99.8297 14.2912 100.265 14.2971C100.676 14.3044 101.088 14.2823 101.489 14.2313C102.71 14.0602 103.854 13.7548 104.851 13.3339C106.714 12.5882 108.198 11.5949 109.162 10.4481C109.634 9.86757 109.91 9.245 109.976 8.61065C116.116 6.88565 122.665 5.63457 129.434 4.89319C136.939 4.05074 144.586 3.64488 152.248 3.6824C156.084 3.6824 159.921 3.79457 163.743 3.98412C167.545 4.1655 171.325 4.45994 175.068 4.86611C178.619 5.21877 182.062 5.84117 185.296 6.71518C184.316 6.90745 183.368 7.14693 182.465 7.43082C181.168 7.82491 180.054 8.37684 179.209 9.0439C178.694 9.4689 178.343 9.94663 178.176 10.4481C178.022 10.9353 178.037 11.4338 178.218 11.9181C178.369 12.3189 178.606 12.7085 178.926 13.0786C179.082 13.2488 179.237 13.4113 179.407 13.566C179.485 13.6434 179.57 13.7207 179.655 13.7942L179.782 13.9025C179.846 13.9567 179.981 14.0534 180.08 14.123C180.526 14.4242 181.083 14.6706 181.715 14.8464C182.258 14.9988 182.844 15.1008 183.449 15.1481C184.345 15.2134 185.255 15.1858 186.132 15.0669C187.471 14.8959 188.745 14.5987 189.897 14.1888C190.965 13.8017 191.932 13.3371 192.771 12.8078C193.668 12.2511 194.386 11.6154 194.895 10.9278C195.366 10.3006 195.606 9.62897 195.602 8.95107C196.636 8.85565 197.676 8.76668 198.724 8.68415C202.504 8.40176 206.354 8.20835 210.212 8.05748C225.692 7.48884 241.357 7.37666 256.993 7.28382C272.629 7.19098 288.322 7.14842 304 6.98982V6.64169C288.333 5.92217 272.667 5.38317 257 5.0247ZM102.515 11.6009C102.27 11.695 102.014 11.7816 101.751 11.8601C102.314 11.5106 102.927 11.186 103.584 10.8891C103.988 10.7073 104.405 10.5332 104.83 10.3591C104.182 10.8323 103.401 11.2462 102.515 11.5854V11.6009ZM186.231 11.1792C185.82 11.3396 185.373 11.4697 184.9 11.5661C184.808 11.4666 184.739 11.3614 184.695 11.2527C184.685 11.2116 184.685 11.17 184.695 11.1289C184.701 11.1009 184.721 11.0743 184.751 11.0516C185.041 10.8417 185.41 10.6688 185.834 10.5448C186.51 10.3297 187.221 10.1496 187.958 10.0071L188.545 9.89494C187.96 10.4085 187.169 10.8424 186.231 11.1638V11.1792Z" fill="#950FAB"/>
+            </svg>
+            <p class="home-description opacity-75  rounded-3 ms-3 mb-3 p-1" tabindex="0"
+               aria-label="Setup a bill and leave it to us, less manual effort, more time for your activities"
+            >Setup a bill and leave it to us, less manual effort, more time for your activities</p>
+            <button class="get-started-btn py-2 px-3 border-0 text-light rounded-5 ms-3 fw-medium" tabindex="0" role="button"
+                    aria-label="Get started"
+            >Get Started</button>
+            <!----------------------------Other details container--------------------->
+            <div class="other-home-det-ctn d-flex flex-wrap gap-5 mb-5  ms-3">
+                <!----------------------Insured container------------------------->
+                <div class="insured d-flex flex-column justify-content-center">
+                    <p class="p-1 mb-1" tabindex="0" aria-label="Insured by">INSURED BY</p>
+                    <img src="img/NDIC.svg" alt="NDIC logo">
+                </div>
+                <!-----------------------Secured container----------------------->
+                <div class="insured d-flex flex-column justify-content-center">
+                    <p class="p-1  mb-1" tabindex="0" aria-label="Secured by">SECURED BY</p>
+                    <img src="img/256 bit.svg" alt="256 Bit logo">
+                </div>
+            </div>
+        </div>
+        <!---------------------Home Images and illustratio container------------------>
+        <div class="img-ctn rounded-2">
+            <img src="img/Vector.svg" alt="Vector" class="vector-one">
+            <img src="img/home-human.svg" alt="human illustration" class="human-illus position-absolute">
+            <img src="img/ibedc preview.svg" alt="IBEDC preview" class="preview-img position-absolute">
+        </div>
+    </section>
+    <!-------------------------------Trust section--------------------------------------->
+    <section class="trusted d-flex flex-column justify-content-center align-items-center w-100">
+        <p class="home-header p-1 text-center fw-bold rounded-3" tabindex="0"
+           aria-label="Trusted by global brands"
+        >Trusted by global brands</p>
+        <p class="home-description opacity-75 p-1 mb-5 rounded-3 " tabindex="0"
+           aria-label="Thousands of companies trust us to keep them in check with their bills payment"
+        >Thousands of companies trust us to keep them in check with their bills payment</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="1111" height="1" viewBox="0 0 1111 1" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1110.5 1H0.5V0H1110.5V1Z" fill="url(#paint0_linear_32_3426)"/>
+            <defs>
+              <linearGradient id="paint0_linear_32_3426" x1="0.5" y1="0" x2="1110.5" y2="1.00857" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#C0CCDA" stop-opacity="0.1"/>
+                <stop offset="0.503785" stop-color="#C0CCDA" stop-opacity="0.6"/>
+                <stop offset="1" stop-color="#C0CCDA" stop-opacity="0.1"/>
+              </linearGradient>
+            </defs>
+        </svg>
+        <!-------------------Trust image container--------------------------------------------->
+        <div class="trust-img-ctn d-flex flex-wrap align-items-center justify-content-center gap-5 py-2">
+            <img src="img/Airbnb Logo.svg" alt="Airbnb Logo">
+            <img src="img/Hubspot Logo.svg" alt="Hubspot Logo">
+            <img src="img/Google Logo.svg" alt="Google Logo">
+            <img src="img/Microsoft Logo.svg" alt="Microsoft Logo">
+            <img src="img/Walmart Logo.svg" alt="Walmart Logo">
+            <img src="img/FedEx Logo.svg" alt="FedEx Logo">
+        </div>
+        <!------------------------End of trust imag container-------------------------->
+        <svg xmlns="http://www.w3.org/2000/svg" width="1111" height="1" viewBox="0 0 1111 1" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1110.5 1H0.5V0H1110.5V1Z" fill="url(#paint0_linear_32_3426)"/>
+            <defs>
+              <linearGradient id="paint0_linear_32_3426" x1="0.5" y1="0" x2="1110.5" y2="1.00857" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#C0CCDA" stop-opacity="0.1"/>
+                <stop offset="0.503785" stop-color="#C0CCDA" stop-opacity="0.6"/>
+                <stop offset="1" stop-color="#C0CCDA" stop-opacity="0.1"/>
+              </linearGradient>
+            </defs>
+        </svg>
+    </section>
+    <!----------------------Our services section----------------------------->
+    <section class="services d-flex flex-wrap align-items-center justify-content-center w-100">
+        <!-------------------Automated bills section----------------------->
+        <div class="automated d-flex flex-row flex-wrap-reverse align-items-center justify-content-center gap-5 top-margin">
+            <!----------------Automated bills details container---------------------->
+            <div class="automate-det-ctn flex flex-column justify-content-center">
+                <p class="home-header rounded-3 p-1 fw-bold mb-0" tabindex="0"
+                   aria-label="Automate Bills, Simplify Life">Automate Bills, Simplify Life</p>
+                <p class="home-description opacity-75 rounded-3 p-1" tabindex="0"
+                   aria-label="Experience hassle-free living with our app's recurring bills payment feature. Set it, forget it, and enjoy peace of mind as your bills are effortlessly handled"
+                >Experience hassle-free living with our app's recurring bills payment feature. Set it, forget it, and enjoy peace of mind as your bills are effortlessly handled</p>
+                <button class="get-started-btn py-2 px-3 border-0 text-light rounded-5" tabindex="0" role="button"
+                    aria-label="Get started"
+                >Get Started</button>
+            </div>
+            <!-------------------Automated image container-------------------------->
+            <div class="automate-image-ctn d-flex align-items-center justify-content-center position-relative">
+                <svg class="vector-two position-absolute" xmlns="http://www.w3.org/2000/svg" width="40" height="30" viewBox="0 0 40 30" fill="none">
+                    <path d="M25.4449 17.4951C25.8684 17.7845 26.2739 18.0227 26.6316 18.3169C27.0044 18.6222 27.3964 18.9378 27.6658 19.3277C28.2807 20.2227 28.0217 21.1994 27.1127 21.7946C26.5261 22.1781 25.8984 22.3779 25.2013 22.3975C22.3272 22.4741 19.5119 22.0974 16.7566 21.2795C16.1477 21.0994 15.5404 20.9118 14.8532 20.7043C14.9256 20.9146 14.9552 21.0448 15.0128 21.1636C15.6663 22.4886 16.3111 23.8176 16.9848 25.1316C17.2059 25.5616 17.4908 25.9609 17.7656 26.3618C18.2727 27.0992 18.3191 27.8349 17.8795 28.4455C17.4497 29.0388 16.753 29.2839 15.9158 28.9583C14.9971 28.6026 14.0866 28.1841 13.2509 27.6688C10.9074 26.2241 9.0137 24.2456 7.07124 22.3267C5.23297 20.5116 3.49622 18.6116 2.3475 16.2695C1.76798 15.0865 1.29904 13.8481 0.809105 12.6245C0.697458 12.3445 0.652801 12.0111 0.67533 11.7104C0.703067 11.3167 0.948762 11.027 1.3596 10.9627C1.75008 10.9016 2.04697 11.082 2.20037 11.438C3.25667 13.8769 4.96103 15.8598 6.81859 17.6852C8.66331 19.4978 10.6654 21.1517 12.6017 22.8713C12.754 23.0055 12.9252 23.1166 13.2207 23.3379C13.1205 23.0508 13.0723 22.9164 13.0282 22.781C12.5744 21.3617 12.0874 19.9507 11.6775 18.5197C11.4247 17.6376 12.1005 16.788 13.0485 16.7778C13.595 16.7734 14.1532 16.8911 14.6886 17.0234C16.8163 17.5433 18.9359 18.0907 21.0607 18.6237C21.2555 18.6734 21.4606 18.6862 21.8045 18.7362C21.5122 18.3783 21.3021 18.135 21.1102 17.8802C20.2851 16.7772 20.5808 15.7245 21.8637 15.2291C22.594 14.9484 23.3411 14.7147 24.0675 14.4254C26.6288 13.4022 28.6041 11.6866 29.9788 9.30069C30.6641 8.11221 31.2958 6.89205 31.9477 5.68625C32.0184 5.55515 32.0642 5.41256 32.1776 5.14406C29.7304 5.90476 27.3602 5.96539 24.9178 5.4139C24.9125 5.62048 24.915 5.76611 24.9055 5.91294C24.8752 6.43143 24.8991 6.9621 24.8011 7.46733C24.4197 9.44161 23.1244 10.5242 21.116 10.5467C19.304 10.5683 17.5635 10.1237 15.8378 9.63941C14.5662 9.28272 13.3186 8.84521 12.058 8.4479C11.7594 8.35328 11.4592 8.26613 11.1538 8.19349C9.89607 7.89679 9.6713 8.03243 9.57429 9.33565C9.52384 10.0221 9.56387 10.725 9.6411 11.4108C9.74959 12.3937 9.93451 13.3683 10.0768 14.349C10.1114 14.5881 10.1927 14.8632 10.1131 15.0687C9.99108 15.3843 9.81049 15.7945 9.54384 15.907C9.27905 16.0199 8.86545 15.8523 8.54267 15.7346C8.38854 15.6784 8.25782 15.4745 8.17953 15.308C7.21408 13.2502 6.38326 11.1521 6.58639 8.81039C6.62592 8.34689 6.72526 7.87921 6.87167 7.4378C7.47008 5.62408 8.83735 4.65763 10.7316 4.88977C11.9458 5.03949 13.1289 5.44093 14.3245 5.74326C16.1958 6.2172 18.0601 6.71311 19.9334 7.17772C20.3179 7.27403 20.7261 7.27376 21.1223 7.31783C21.5842 7.36686 21.8804 7.14927 21.9348 6.70677C22.0125 6.0735 22.0548 5.43225 22.0553 4.79337C22.056 4.65045 21.8385 4.46624 21.6793 4.37161C20.9358 3.926 20.1673 3.52181 19.4301 3.06584C19.1718 2.90579 18.9454 2.66472 18.764 2.41612C18.4538 1.98958 18.4296 1.50392 18.6747 1.03376C18.9211 0.557994 19.3448 0.314226 19.8714 0.354316C20.2827 0.384117 20.6916 0.493769 21.0961 0.588687C22.8898 1.00598 24.6673 1.50393 26.4768 1.82482C27.4184 1.99159 28.4181 1.90878 29.3833 1.83977C32.1593 1.64112 34.9143 1.30052 37.5944 0.490285C37.9481 0.383643 38.3585 0.381915 38.7284 0.429851C39.7006 0.556471 40.227 1.47856 39.7269 2.31474C39.4129 2.83802 38.9181 3.35392 38.3779 3.61851C37.547 4.02353 36.6176 4.2476 35.7118 4.4711C35.3004 4.57261 35.1359 4.7022 35.0354 5.14021C33.9994 9.7447 31.8676 13.6557 27.7694 16.2599C27.059 16.7136 26.2773 17.0571 25.4449 17.4951Z" fill="#950FAB"/>
+                </svg>
+                <img src="img/add new bill 2.svg" alt="Add new bill illustration">
+            </div>
+        </div>
+        <!------------------------Save section--------------------------------------->
+        <div class="automated d-flex flex-wrap flex-row align-items-center justify-content-center gap-5 bottom-margin">
+            <!-------------------Save image container for large screen devices----------------------------->
+            <div class="big-devices automate-image-ctn d-flex align-items-center justify-content-center position-relative">
+                <svg class="vector-three position-absolute" xmlns="http://www.w3.org/2000/svg" width="36" height="25" viewBox="0 0 36 25" fill="none">
+                    <path d="M27.326 18.0802C25.9798 18.2189 24.6202 18.2897 23.2878 18.5102C21.5707 18.7975 19.8779 19.2218 18.1694 19.5536C14.3206 20.2994 10.9352 19.4205 7.91163 16.8483C5.34144 14.6617 3.19509 12.172 1.67872 9.17334C1.12152 8.07286 0.722007 6.86781 0.415151 5.6668C-0.0413036 3.87067 0.731373 2.04223 2.83328 1.54877C5.97852 0.810562 9.15673 0.222395 12.3985 0.341681C15.3344 0.449952 18.263 0.726246 21.1938 0.92485C25.7711 1.23703 29.0678 3.55634 31.4705 7.36911C33.479 10.554 34.8285 14.0051 35.7283 17.6316C35.946 18.506 35.8604 19.496 35.7307 20.4064C35.6202 21.1945 35.1488 21.3341 34.6297 20.7507C33.6809 19.6889 32.5585 19.7503 31.3329 19.9685C29.1942 20.3477 27.5089 21.4874 26.0535 23.0272C25.8603 23.2301 25.7202 23.5456 25.6896 23.8263C25.6315 24.3381 25.3632 24.2904 25.068 24.1127C24.4538 23.7423 24.1749 23.1055 24.354 22.4771C24.5785 21.6836 24.9219 20.8766 25.4052 20.2174C25.9378 19.4906 26.6852 18.9207 27.3394 18.2817C27.3377 18.2143 27.3336 18.1479 27.326 18.0802ZM4.76593 4.71646C4.88765 4.98878 4.9473 5.16669 5.04138 5.32635C6.85659 8.36471 9.09839 11.0362 11.8288 13.3018C13.0343 14.3029 14.3771 14.7852 15.9345 14.6743C16.803 14.61 17.6768 14.5831 18.5356 14.4464C21.0625 14.0527 23.581 13.6146 26.0987 13.1938C26.081 13.1733 26.0479 13.1057 25.9944 13.0813C24.3572 12.2959 22.7261 11.505 20.886 11.3075C20.3489 11.2493 19.7745 11.2219 19.3049 10.9971C18.9718 10.8363 18.6357 10.3956 18.5656 10.0292C18.4644 9.49771 18.909 9.19669 19.4099 9.07225C19.5916 9.02793 19.7838 9.0131 19.9685 9.00722C23.5035 8.89317 26.5236 10.2508 29.2896 12.3101C29.6506 12.5778 29.9279 12.9567 30.2445 13.284C30.2913 13.2489 30.3391 13.2161 30.3859 13.181C29.7244 12.0505 29.0581 10.922 28.4061 9.78723C26.7362 6.87711 24.2219 5.27917 20.9016 4.90803C20.4351 4.85518 19.9727 4.76072 19.5103 4.66626C16.4218 4.0324 13.2889 3.97241 10.1614 4.10887C8.38858 4.1825 6.62159 4.49785 4.76593 4.71646Z" fill="#950FAB"/>
+                </svg>
+                <img src="img/statistics.svg" alt="Add new bill illustration">
+            </div>
+            <!----------------Save details container---------------------->
+            <div class="automate-det-ctn flex flex-column justify-content-center">
+                <p class="home-header rounded-3 p-1 fw-bold mb-0" tabindex="0"
+                   aria-label="Set, Save, Achieve Goals">Set, Save, Achieve Goals</p>
+                <p class="home-description opacity-75 rounded-3 p-1" tabindex="0"
+                   aria-label="Elevate your financial journey with our empowering budget feature. Set personalized targets, effortlessly monitor progress, and save up for your goals."
+                >Elevate your financial journey with our empowering budget feature. Set personalized targets, effortlessly monitor progress, and save up for your goals.</p>
+                <button class="get-started-btn py-2 px-3 border-0 text-light rounded-5" tabindex="0" role="button"
+                    aria-label="Get started"
+                >Get Started</button>
+            </div>
+        </div>
+    </section>
+    <!-------------------------Local merchants section------------------------------------------->
+    <section class="merchants d-flex flex-column align-items-center justify-content-center w-100 gap-5">
+        <!-----------------------------Merchant details container-------------------------->
+        <div class="merchant-det-ctn d-flex flex-column justify-content-center align-items-center text-center text-light top-margin">
+            <p class="home-header rounded-3 p-1 fw-bold text-light mb-1" tabindex="0"
+               aria-label="Over 100+ global and local merchants"
+            >Over 100+ global and local merchants</p>
+            <p class="home-description opacity-75 rounded-3 p-1 mb-4 " tabindex="0"
+               aria-label="Dive into a world of convenience with our app, offering a vast network of 100+ global and local merchants for all your payment needs. Simplify your transactions, broaden your options"
+            >Dive into a world of convenience with our app, offering a vast network of 100+ global and local merchants for all your payment needs. Simplify your transactions, broaden your options</p>
+            <button class="get-started-btn py-2 px-3 border-0 rounded-5 bg-white text-dark " tabindex="0" role="button"
+                    aria-label="Get started"
+            >Get Started</button>
+        </div>
+        <!--------------------------Top merchant sliding icon container---------------------------------------->
+        <div class="merchant-icon-ctn d-flex bottom-margin">
+            <div class="left d-flex">
+                <img src="img/Logo 1.svg" alt="">
+                <img src="img/Logo 2.svg" alt="">
+                <img src="img/Logo 3.svg" alt="">
+                <img src="img/Logo 4.svg" alt="">
+                <img src="img/Logo 5.svg" alt="">
+                <img src="img/Logo 6.svg" alt="">
+                <img src="img/Logo 7.svg" alt="">
+                <img src="img/Logo 8.svg" alt="">
+                <img src="img/Logo 9.svg" alt="">
+                <img src="img/Logo 10.svg" alt="">
+                <img src="img/Logo 11.svg" alt="">
+            </div>
+
+            <div class="left d-flex">
+                <img src="img/Logo 1.svg" alt="">
+                <img src="img/Logo 2.svg" alt="">
+                <img src="img/Logo 3.svg" alt="">
+                <img src="img/Logo 4.svg" alt="">
+                <img src="img/Logo 5.svg" alt="">
+                <img src="img/Logo 6.svg" alt="">
+                <img src="img/Logo 7.svg" alt="">
+                <img src="img/Logo 8.svg" alt="">
+                <img src="img/Logo 9.svg" alt="">
+                <img src="img/Logo 10.svg" alt="">
+                <img src="img/Logo 11.svg" alt="">
+            </div>
+        </div>
+    </section>
+    <!---------------------------------Feedback section------------------------------>
+    <section class="feedback d-flex flex-column justify-content-center gap-5 w-100">
+        <!-----------------------Feedback details container---------------->
+        <div class="feedback-det-ctn flex flex-column">
+            <p class="home-header rounded-3 p-1 fw-bold d-flex position-relative " tabindex="0"
+               aria-label="Customer Stories That Speak Our Success"
+            >
+            <!--<svg class="vector-four position-absolute" xmlns="http://www.w3.org/2000/svg" width="83" height="47" viewBox="0 0 83 47" fill="none">
+                <path d="M54.8136 18.0195C54.5165 17.821 54.33 17.7281 54.1538 17.6024C51.7424 15.95 50.142 13.7042 49.4937 10.8722C48.6398 7.08158 50.8657 3.30302 54.7249 1.78037C56.2403 1.16983 57.8284 0.904007 59.4565 0.972874C63.8077 1.10575 67.8352 2.28592 71.4049 4.8306C76.1759 8.24489 79.7411 12.5437 81.4397 18.2412C81.908 19.7999 82.1822 21.4066 82.0996 23.0652C81.8064 29.4064 76.7941 33.2091 70.6146 31.7995C69.841 31.6341 69.0776 31.4361 68.2486 31.2179C68.2183 31.3161 68.1361 31.5238 68.0653 31.7529C67.7099 32.8443 67.3873 33.9457 66.9552 34.9956C65.3402 38.9434 61.3715 40.4146 57.5452 38.5258C56.8437 38.1854 56.2267 37.7456 55.49 37.287C55.3977 37.5275 55.2942 37.7465 55.2233 37.9756C54.7983 39.3502 54.4174 40.7561 53.9383 42.132C53.5907 43.0824 53.2216 44.0442 52.6763 44.8803C51.5552 46.6506 49.4252 46.9296 47.897 45.494C47.1882 44.8291 46.573 43.9777 46.2173 43.0985C45.241 40.6318 44.4045 38.1184 43.5568 35.5836C43.3947 35.1219 43.3613 34.5922 43.3934 34.0825C43.4599 33.1714 43.9547 32.499 44.7931 32.1647C45.61 31.8417 46.4681 31.9076 47.0673 32.5211C47.5997 33.0604 48.0816 33.7633 48.3253 34.4829C48.9383 36.2113 49.4227 38.0077 49.9499 39.7815C50.0328 40.0935 50.137 40.3942 50.2085 40.6848C50.2955 40.6935 50.361 40.7136 50.4366 40.7009C50.4747 40.4618 50.4913 40.234 50.5294 39.9949C50.8043 38.6997 51.025 37.4059 51.3869 36.1195C51.6488 35.2145 52.0292 34.2741 52.5429 33.4821C53.4872 32.0517 55.2039 31.7178 56.666 32.6135C57.3586 33.0407 57.9036 33.6555 58.5646 34.1267C59.2697 34.6294 59.966 35.2189 60.7646 35.5352C62.4159 36.1666 63.7021 35.4858 64.1955 33.7739C64.4371 32.9343 64.4823 32.0345 64.5715 31.1662C64.6583 30.1896 64.614 29.1729 64.7336 28.2063C64.9602 26.1978 66.6161 25.0749 68.5914 25.6443C69.3447 25.8751 70.0576 26.2368 70.7704 26.5985C71.8662 27.1133 72.9899 27.4218 74.2237 27.3161C75.1979 27.2384 75.9256 26.7985 76.4382 25.9524C77.3371 24.4364 77.6263 22.8053 77.3926 21.0677C77.0063 18.3161 75.7941 15.9742 73.9705 13.9286C72.0247 11.756 69.7633 10.0243 67.174 8.6577C65.0128 7.52981 62.6909 6.97966 60.2613 6.95185C59.6211 6.93486 58.9935 6.99337 58.3557 7.0846C56.053 7.4002 54.8533 8.5553 55.2003 11.492C55.4388 13.446 56.6746 14.8995 58.3344 15.9096C58.4994 16.0138 58.9216 15.982 59.0591 15.8271C59.4616 15.395 59.8843 14.8976 60.1004 14.3726C60.3885 13.6727 60.7482 13.2634 61.3871 13.2262C62.0046 13.2005 62.6216 13.6403 62.8313 14.2957C63.1566 15.2731 62.8947 16.1781 62.4036 17.0129C61.2218 18.9797 59.5052 20.2989 57.3985 21.1403C55.206 22.0271 52.9045 22.3968 50.5279 22.3135C43.7787 22.1088 37.3067 20.7171 31.0995 18.063C27.8372 16.6694 24.5547 15.3413 21.2519 14.0786C18.3976 12.9892 15.3838 12.5316 12.3331 12.3672C10.3787 12.2521 8.46421 12.4717 6.61353 13.1229C6.31223 13.2276 6.00081 13.3651 5.70071 13.5239C4.31869 14.2828 4.09076 15.252 4.92226 16.5636C5.12478 16.8944 5.25287 17.2919 5.41251 17.6454C4.979 17.6558 4.55799 17.7418 4.15483 17.6541C1.60487 17.0879 0.372476 14.8114 1.23974 12.3542C1.93378 10.3993 3.44734 9.21496 5.26166 8.39146C7.30167 7.47588 9.45312 7.18559 11.6558 7.25137C15.1389 7.35113 18.566 7.86369 21.8145 9.12767C25.3692 10.5033 28.9048 11.9986 32.3786 13.6361C37.7151 16.1488 43.2403 17.8774 49.1262 18.2655C50.6899 18.3684 52.2805 18.2108 53.8734 18.1614C54.167 18.1976 54.4141 18.0942 54.8136 18.0195Z" fill="#950FAB"/>
+            </svg>-->
+            Customer Stories That Speak Our Success</p>
+            <p class="home-description opacity-75 rounded-3 p-1" tabindex="0"
+               aria-label="Transforming bill payments: where 1000+ businesses and individuals thrive effortlessly"
+            >Transforming bill payments: where 1000+ businesses and individuals thrive effortlessly</p>
+        </div>
+        <!------------------------Slider buttons--------------------------->
+        <div class="slider-buttons d-flex align-items-center gap-2">
+            <button disabled class="d-flex justify-content-center align-items-center" id="previous" tabindex="0">
+                <i class="fa-solid fa-chevron-left fa-2x" style="color: white;"></i>
+            </button>
+            <button class="d-flex justify-content-center align-items-center" id="next" tabindex="0">
+                <i class="fa-solid fa-chevron-right fa-2x" style="color: white;"></i>
+            </button>
+        </div>
+        <!----------------------------Carousel container------------------------>
+        <div class="slider d-grid align-items-center position-relative">
+            <!-------------------------Carousel card----------------------------------->
+            <div class="card d-flex flex-column align-items-center justify-content-center gap-3">
+                <p class="user-feedback p-1 rounded-3 mb-0 mt-3" tabindex="0"
+                   aria-label="Using this fintech app has been a game-changer for me. Simplifying bill payments and effortlessly managing my finances has never been so sweet"
+                >
+                “Using this fintech app has been a game-changer for me. Simplifying bill payments and effortlessly managing my finances has never been so sweet”
+                </p>
+                <div class="user-details-ctn d-flex flex-row gap-2 align-items-center mb-3">
+                    <img src="img/Ellipse 678.svg" alt="User Profile picture">
+                    <div class="user-details flex flex-col align-items-center ">
+                        <p class="user-name mb-0 p-1 rounded-3" tabindex="0"
+                                aria-label="John Kennedy">John Kennedy</p>
+                        <p class="user-position mb-0 p-1 rounded-3" tabindex="0"
+                            aria-label="CEO, Google">CEO, Google
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--------------------------Carousel card----------------------------------->
+            <div class="card d-flex flex-column align-items-center justify-content-center gap-3">
+                <p class="user-feedback p-1 rounded-3 mb-0 mt-3" tabindex="0"
+                    aria-label="This app is a game-changer! Finally, bill payments feel like a breeze. Managing my expenses has never been this smooth. Kudos to the team behind this genius solution!"
+                >
+                    "This app is a game-changer! Finally, bill payments feel like a breeze. Managing my expenses has never been this smooth. Kudos to the team behind this genius solution!"
+                </p>
+                <div class="user-details-ctn d-flex flex-row gap-2 align-items-center mb-3">
+                    <img src="img/kamil.svg" alt="User Profile picture">
+                    <div class="user-details flex flex-col align-items-center">
+                        <p class="user-name mb-0 p-1 rounded-3" tabindex="0"
+                            aria-label="Kamil Keneth">Kamil Keneth
+                        </p>
+                        <p class="user-position mb-0 p-1 rounded-3" tabindex="0"
+                            aria-label="CEO, Twitter">CEO, Twitter
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!------------------------------Carousel card------------------------>
+            <div class="card d-flex flex-column align-items-center justify-content-center gap-3">
+                <p class="user-feedback p-1 rounded-3 mb-0 mt-3" tabindex="0"
+                   aria-label="Using this fintech app has been a game-changer for me. Simplifying bill payments and effortlessly managing my finances has never been so sweet"
+                >
+                    “Using this fintech app has been a game-changer for me. Simplifying bill payments and effortlessly managing my finances has never been so sweet”
+                </p>
+                <div class="user-details-ctn d-flex flex-row gap-2 align-items-center mb-3">
+                    <img src="img/Ellipse 678.svg" alt="User Profile picture">
+                    <div class="user-details flex flex-col align-items-center ">
+                        <p class="user-name mb-0 p-1 rounded-3" tabindex="0"
+                            aria-label="John Kennedy">John Kennedy
+                        </p>
+                        <p class="user-position mb-0 p-1 rounded-3" tabindex="0"
+                            aria-label="CEO, Google">CEO, Google
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-----------------------------------Carousel card----------------->
+            <div class="card d-flex flex-column align-items-center justify-content-center gap-3">
+                <p class="user-feedback p-1 rounded-3 mb-0 mt-3" tabindex="0"
+                    aria-label="This app is a game-changer! Finally, bill payments feel like a breeze. Managing my expenses has never been this smooth. Kudos to the team behind this genius solution!"
+                >
+                "This app is a game-changer! Finally, bill payments feel like a breeze. Managing my expenses has never been this smooth. Kudos to the team behind this genius solution!"
+                </p>
+                <div class="user-details-ctn d-flex flex-row gap-2 align-items-center mb-3">
+                    <img src="img/kamil.svg" alt="User Profile picture">
+                    <div class="user-details flex flex-col align-items-center">
+                        <p class="user-name mb-0 p-1 rounded-3" tabindex="0"
+                            aria-label="Kamil Keneth">Kamil Keneth
+                        </p>
+                        <p class="user-position mb-0 p-1 rounded-3" tabindex="0"
+                           aria-label="CEO, Twitter">CEO, Twitter
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!------------------------------Carousel card------------------------>
+            <div class="card d-flex flex-column align-items-center justify-content-center gap-3">
+                <p class="user-feedback p-1 rounded-3 mb-0 mt-3" tabindex="0"
+                   aria-label="Using this fintech app has been a game-changer for me. Simplifying bill payments and effortlessly managing my finances has never been so sweet"
+                >
+                    “Using this fintech app has been a game-changer for me. Simplifying bill payments and effortlessly managing my finances has never been so sweet”
+                </p>
+                <div class="user-details-ctn d-flex flex-row gap-2 align-items-center mb-3">
+                    <img src="img/Ellipse 678.svg" alt="User Profile picture">
+                    <div class="user-details flex flex-col align-items-center ">
+                        <p class="user-name mb-0 p-1 rounded-3" tabindex="0"
+                            aria-label="John Kennedy">John Kennedy
+                        </p>
+                        <p class="user-position mb-0 p-1 rounded-3" tabindex="0"
+                            aria-label="CEO, Google">CEO, Google
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------------------------Steps container-------------------------->
+    <section class="steps d-flex flex-row flex-wrap w-100 justify-content-center align-items-center">
+        <!------------------------------Steps details container--------------------------------------->
+        <div class="steps-det-ctn d-flex flex-column justify-content-center align-items-center mt-5">
+            <p class="home-header p-1 rounded-3 fw-bold mb-0" tabindex="0"
+               aria-label="Start Scheduling in Minutes: Effortless and Quick!"
+            >Start Scheduling in Minutes: Effortless and Quick!</p>
+            <p class="home-description opacity-75 p-1 rounded-3" tabindex="0"
+               aria-label="Seize control of your bils with just 3 minutes – because time is yours to command"
+            >Seize control of your bils with just 3 minutes – because time is yours to command</p>
+            <!-------------------------Guide container--------------------------------------->
+            <div class="guide d-flex flex-column position-relative">
+                <li class="guide-header fw-bold rounded-3 p-1 d-flex gap-3 mb-0" tabindex="0"
+                   aria-label="Create Account"><span>.</span>Create Account</li>
+                <p class="guide-description opacity-75 p-1 rounded-3" tabindex="0"
+                   aria-label="Download the app from Appstore, then create an account"
+                >Download the app from Appstore, then create an account</p>
+            </div>
+            <!-------------------------Guide container--------------------------------------->
+            <div class="guide d-flex flex-column position-relative">
+                <li class="guide-header fw-bold rounded-3 p-1 d-flex gap-3 mb-0" tabindex="0"
+                   aria-label="Card"><span>.</span>Card</li>
+                <p class="guide-description opacity-75 p-1 rounded-3" tabindex="0"
+                   aria-label="Link the debit card you prefer for charging purposes."
+                >Link the debit card you prefer for charging purposes.</p>
+            </div>
+            <!-------------------------Guide container--------------------------------------->
+            <div class="guide d-flex flex-column position-relative">
+                <li class="guide-header fw-bold rounded-3 p-1 d-flex gap-3 mb-0" tabindex="0"
+                   aria-label="Bills/Budget"><span>.</span>Bilss/Budget</li>
+                <p class="guide-description opacity-75 p-1 rounded-3" tabindex="0"
+                   aria-label="Start Scheduling"
+                >Start Scheduling.</p>
+            </div>
+        </div>
+        <!-----------------------------Image container---------------------------->
+        <div class="steps-img-ctn position-relative">
+            <img src="img/control.svg" alt="illustration" class="position-absolute">
+        </div>
+    </section>
+    <!-------------------------Get app section------------------------------------>
+    <section class="get-app d-flex flex-row align-items-center justify-content-center w-100">
+        <!---------------------------------------Get the app container------------------------------->
+        <div class="get-app-ctn d-flex flex-column align-items-center justify-content-center">
+            <p class="home-header text-light text-center p-1 rounded-3 d-flex position-relative" tabindex="0"
+               aria-label="Simplified bill payments for businesses and individuals"
+            >
+            <!--<svg class="vector-five position-absolute" xmlns="http://www.w3.org/2000/svg" width="164" height="85" viewBox="0 0 164 85" fill="none">
+                <path d="M163.563 32.2063C162.171 35.7893 160.723 39.3516 159.44 42.9762C159.201 43.6448 159.468 44.5999 159.757 45.3245C160.583 47.3869 161.68 49.3441 162.398 51.4332C162.968 53.0904 162.677 54.8273 161.751 56.3823C160.554 58.3853 158.787 59.4513 156.446 59.3642C154.119 59.2735 152.379 58.0279 151.683 55.8914C150.988 53.7548 150.817 51.4463 150.317 49.2385C150.131 48.4235 149.859 47.4164 149.276 46.9361C146.189 44.4198 143.115 41.8435 139.801 39.6542C126.124 30.6311 111.123 24.4692 95.5343 19.6569C90.1353 17.9874 84.7127 16.377 79.2339 15.0016C63.2895 11.0011 47.1166 9.60593 30.7459 11.4028C26.7079 11.8499 22.6803 12.7555 18.7732 13.8864C16.4629 14.5573 14.2513 15.8744 12.2627 17.2772C9.76741 19.034 9.28896 21.183 10.3035 24.0864C11.804 28.401 14.9244 31.3165 19.0069 32.9919C21.965 34.2026 25.1331 35.0757 28.2904 35.5819C35.5689 36.7481 42.8727 36.5059 50.1363 35.207C53.9229 34.5288 57.7086 33.8317 61.5023 33.1822C62.3395 33.0398 63.2115 32.9306 64.0462 33.0249C67.4218 33.4123 69.2894 36.977 67.4306 39.8144C66.5012 41.2331 65.0702 42.4103 63.6693 43.4161C55.8972 49.0088 48.582 55.1399 41.9535 62.0458C39.3695 64.7389 37.0243 67.7043 34.8672 70.7528C33.1071 73.2343 33.5653 73.9629 36.5465 74.5888C40.1212 75.3346 43.6623 74.8809 47.1399 74.0468C52.8486 72.6832 51.569 74.2572 52.8862 68.3803C53.6406 65.0047 55.6033 63.1893 58.9161 62.6283C61.6294 62.17 64.2171 62.4057 66.6005 63.9112C70.9232 66.6357 71.626 72.0698 67.9044 75.5855C66.3821 77.0252 64.5071 78.2399 62.5829 79.0705C55.1437 82.2797 47.3326 84.0608 39.2278 84.3449C35.7387 84.4695 32.297 83.969 29.1021 82.4015C24.7966 80.2861 22.7056 76.4643 23.2297 71.679C23.6969 67.4031 25.7558 63.8494 28.3942 60.5904C33.2418 54.6015 39.1518 49.7365 45.1127 44.9388C45.4462 44.6696 45.7752 44.3976 46.0889 44.1104C46.1447 44.0585 46.1378 43.9383 46.1895 43.7312C45.593 43.7684 45.0369 43.7994 44.478 43.8348C35.9529 44.3297 27.4634 44.2596 19.1858 41.794C13.5437 40.1122 8.63941 37.2078 5.02891 32.463C3.83315 30.8922 2.79753 29.137 2.0105 27.324C-0.659805 21.1426 0.573269 15.2027 5.34844 10.4471C8.2711 7.53681 11.7974 5.62006 15.6539 4.26922C22.9029 1.73957 30.4304 0.69156 38.0535 0.446621C57.1798 -0.15794 75.8591 2.34644 94.0254 8.52476C104.597 12.118 115.17 15.6878 125.249 20.5536C134.561 25.049 143.399 30.3209 151.494 36.7824C151.821 37.0406 152.174 37.2657 152.605 37.5627C154.174 34.4466 155.702 31.4092 157.226 28.3763C159.332 29.6533 161.45 30.9311 163.563 32.2063Z" fill="white"/>
+            </svg>-->
+            Simplified bill payments for businesses and individuals</p>
+            <p class="home-description text-light opacity-75 p-1 rounded-3" tabindex="0"
+               aria-label="Join the thousands of business and individuals that trust us"
+            >Join the thousands of business and individuals that trust us</p>
+            <!-------------------------------------Get the app sub-container------------------------------->
+            <div class="place d-flex flex-column mt-3 align-items-center">
+                <p class="get-the-app text-white p-1 rounded-3" tabindex="0"
+                   aria-label="Get the app"
+                >Get the app</p>
+                <!------------------------------------Get the app image container---------------------->
+                <div class="app-store d-flex flex-row gap-3">
+                    <img src="img/Layer 2.svg" alt="Playstore">
+                    <img src="img/Group.svg" alt="Appstore">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----------------------------------------Footer---------------------------------------------------->
+    <footer class="d-flex flex-column w-100 align-items-center">
+        <div class="footer-row d-flex flex-row flex-wrap justify-content-between my-5">
+            <!---------------------------Company section-------------------------->
+            <div class="footer-content d-flex flex-column text-white">
+                <p class="footer-head fw-medium p-1 rounded-3" tabindex="0" aria-label="Company">Company</p>
+                <p class="footer-child opacity-75  mt-2 p-1 rounded-3" tabindex="0" aria-label="About us">About Us</p>
+                <p class="footer-child opacity-75 p-1 rounded-3" tabindex="0" aria-label="Blog">Blog</p>
+                <p class="footer-child opacity-75 p-1 rounded-3" tabindex="0" aria-label="Career">Career</p>
+                <p class="footer-child opacity-75 p-1 rounded-3" tabindex="0" aria-label="Contact us">Contact Us</p>
+            </div>
+            <!---------------------------Support section-------------------------->
+            <div class="footer-content d-flex flex-column text-white">
+                <p class="footer-head p-1 rounded-3 fw-medium" tabindex="0" aria-label="Support">Support</p>
+                <p class="footer-child opacity-75 mt-2 mt-2 p-1 rounded-3" tabindex="0" aria-label="Help center">Help Center</p>
+                <p class="footer-child opacity-75 p-1 rounded-3" tabindex="0" aria-label="Security center">Security Center</p>
+                <p class="footer-child opacity-75 p-1 rounded-3" tabindex="0" aria-label="Community guidlines">Community Guidlines</p>
+            </div>
+            <!---------------------------Legal section-------------------------->
+            <div class="footer-content d-flex flex-column text-white">
+                <p class="footer-head p-1 rounded-3 fw-medium" tabindex="0" aria-label="Legal">Legal</p>
+                <p class="footer-child opacity-75 mt-2 mt-2 p-1 rounded-3" tabindex="0" aria-label="Cookies policy">Cookies Policy</p>
+                <p class="footer-child opacity-75 p-1 rounded-3" tabindex="0" aria-label="Privacy policy">Privacy Policy</p>
+                <p class="footer-child opacity-75 p-1 rounded-3" tabindex="0" aria-label="Terms of use">Terms of Services</p>
+                <p class="footer-child opacity-75 p-1 rounded-3" tabindex="0" aria-label="Law enforcement">Law Enforcement</p>
+            </div>
+            <!--------------------------------Install app section---------------------->
+            <div class="footer-content d-flex flex-column text-white">
+                <p class="footer-head p-1 rounded-3 fw-medium" tabindex="0" aria-label="install app">Install App</p>
+                <img src="img/Layer 2.svg" alt="Playstore">
+                <img src="img/Group.svg" alt="Appstore">
+            </div>
+        </div>
+        <!----------------------------------------footer bottom---------------------------->
+        <div class="footer-row d-flex flex-row flex-wrap align-items-center justify-content-between my-3 py-4 top-border">
+            <p class="row-left opacity-75 mb-0">© 2020 Billed. All rights reserved</p>
+            <!------------------------------Social Icon container------------------------------>
+            <div class="row-img-ctn gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+                    <path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16.0957C0 7.25915 7.16344 0.0957031 16 0.0957031C24.8366 0.0957031 32 7.25915 32 16.0957C32 24.9323 24.8366 32.0957 16 32.0957C7.16344 32.0957 0 24.9323 0 16.0957Z" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0009 7.5625C13.6834 7.5625 13.3925 7.57263 12.4823 7.61406C11.5739 7.65566 10.9538 7.79948 10.4112 8.0105C9.84993 8.22846 9.37384 8.52002 8.89952 8.99451C8.42485 9.46883 8.13329 9.94492 7.91462 10.506C7.70307 11.0488 7.55906 11.669 7.51818 12.5771C7.47746 13.4874 7.4668 13.7784 7.4668 16.0959C7.4668 18.4135 7.47711 18.7034 7.51835 19.6136C7.56013 20.5221 7.70395 21.1422 7.9148 21.6848C8.13294 22.246 8.4245 22.7221 8.89899 23.1964C9.37313 23.6711 9.84922 23.9634 10.4101 24.1813C10.9531 24.3924 11.5733 24.5362 12.4816 24.5778C13.3918 24.6192 13.6825 24.6293 15.9999 24.6293C18.3176 24.6293 18.6075 24.6192 19.5178 24.5778C20.4262 24.5362 21.047 24.3924 21.59 24.1813C22.151 23.9634 22.6264 23.6711 23.1006 23.1964C23.5752 22.7221 23.8668 22.246 24.0855 21.685C24.2952 21.1422 24.4392 20.5219 24.4819 19.6138C24.5228 18.7036 24.5335 18.4135 24.5335 16.0959C24.5335 13.7784 24.5228 13.4875 24.4819 12.5773C24.4392 11.6689 24.2952 11.0488 24.0855 10.5062C23.8668 9.94492 23.5752 9.46883 23.1006 8.99451C22.6259 8.51984 22.1512 8.22828 21.5894 8.0105C21.0454 7.79948 20.425 7.65566 19.5165 7.61406C18.6063 7.57263 18.3165 7.5625 15.9983 7.5625H16.0009ZM15.2354 9.10027C15.4626 9.09991 15.7161 9.10027 16.0009 9.10027C18.2793 9.10027 18.5494 9.10845 19.4491 9.14934C20.2811 9.18738 20.7327 9.32641 21.0335 9.44321C21.4317 9.59787 21.7156 9.78277 22.0141 10.0814C22.3128 10.3801 22.4977 10.6646 22.6527 11.0628C22.7695 11.3632 22.9087 11.8148 22.9466 12.6468C22.9875 13.5464 22.9963 13.8166 22.9963 16.0939C22.9963 18.3713 22.9875 18.6415 22.9466 19.5411C22.9085 20.3731 22.7695 20.8247 22.6527 21.1251C22.498 21.5233 22.3128 21.8069 22.0141 22.1054C21.7154 22.4041 21.4319 22.5889 21.0335 22.7436C20.733 22.8609 20.2811 22.9996 19.4491 23.0377C18.5495 23.0786 18.2793 23.0874 16.0009 23.0874C13.7223 23.0874 13.4522 23.0786 12.5527 23.0377C11.7207 22.9993 11.2691 22.8602 10.9681 22.7434C10.5699 22.5888 10.2855 22.4039 9.98679 22.1052C9.68812 21.8065 9.50323 21.5228 9.3482 21.1244C9.2314 20.8239 9.0922 20.3724 9.05433 19.5404C9.01344 18.6408 9.00527 18.3706 9.00527 16.0918C9.00527 13.813 9.01344 13.5442 9.05433 12.6447C9.09238 11.8127 9.2314 11.3611 9.3482 11.0603C9.50287 10.6621 9.68812 10.3776 9.98679 10.0789C10.2855 9.78028 10.5699 9.59539 10.9681 9.44036C11.2689 9.32303 11.7207 9.18436 12.5527 9.14614C13.3399 9.11058 13.645 9.09991 15.2354 9.09814V9.10027ZM20.556 10.5172C19.9906 10.5172 19.532 10.9753 19.532 11.5408C19.532 12.1062 19.9906 12.5648 20.556 12.5648C21.1213 12.5648 21.58 12.1062 21.58 11.5408C21.58 10.9755 21.1213 10.5172 20.556 10.5172ZM16.0009 11.7136C13.5808 11.7136 11.6187 13.6758 11.6187 16.0959C11.6187 18.516 13.5808 20.4773 16.0009 20.4773C18.4211 20.4773 20.3825 18.516 20.3825 16.0959C20.3825 13.6758 18.4211 11.7136 16.0009 11.7136ZM16.0009 13.2514C17.5718 13.2514 18.8454 14.5249 18.8454 16.0959C18.8454 17.6668 17.5718 18.9404 16.0009 18.9404C14.4299 18.9404 13.1564 17.6668 13.1564 16.0959C13.1564 14.5249 14.4299 13.2514 16.0009 13.2514Z" fill="white"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+                    <path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16.0957C0 7.25915 7.16344 0.0957031 16 0.0957031C24.8366 0.0957031 32 7.25915 32 16.0957C32 24.9323 24.8366 32.0957 16 32.0957C7.16344 32.0957 0 24.9323 0 16.0957Z" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.5335 16.084C24.5335 16.6611 24.4747 17.2374 24.3593 17.7991C24.2468 18.3475 24.0801 18.8859 23.8618 19.4006C23.6485 19.9062 23.3839 20.3934 23.0747 20.8478C22.7701 21.2993 22.4192 21.7228 22.0338 22.109C21.6475 22.4934 21.2225 22.8433 20.7712 23.1492C20.3154 23.4562 19.8275 23.7204 19.3216 23.9348C18.8061 24.1519 18.2665 24.3184 17.7186 24.4307C17.1561 24.5464 16.5777 24.6055 15.9997 24.6055C15.4214 24.6055 14.843 24.5464 14.2813 24.4307C13.7326 24.3184 13.1929 24.1519 12.6779 23.9348C12.1721 23.7204 11.6837 23.4562 11.2278 23.1492C10.7766 22.8433 10.3516 22.4934 9.96611 22.109C9.58027 21.7228 9.2294 21.2993 8.92439 20.8478C8.61687 20.3934 8.35184 19.9062 8.13768 19.4006C7.9193 18.8859 7.75224 18.3475 7.63931 17.7991C7.52515 17.2374 7.4668 16.6611 7.4668 16.084C7.4668 15.5065 7.52511 14.929 7.63934 14.3684C7.75227 13.82 7.91934 13.2808 8.13771 12.7669C8.35187 12.261 8.6169 11.7733 8.92442 11.319C9.22943 10.8671 9.5803 10.4443 9.96614 10.0578C10.3516 9.67329 10.7766 9.32423 11.2279 9.01882C11.6837 8.71048 12.1721 8.4463 12.6779 8.23158C13.193 8.01392 13.7326 7.84709 14.2814 7.7356C14.8431 7.62077 15.4214 7.5625 15.9998 7.5625C16.5777 7.5625 17.1561 7.62077 17.7186 7.7356C18.2665 7.84713 18.8061 8.01395 19.3216 8.23158C19.8275 8.44626 20.3154 8.71048 20.7713 9.01882C21.2225 9.32423 21.6476 9.67329 22.0338 10.0578C22.4193 10.4443 22.7701 10.8671 23.0747 11.319C23.3839 11.7733 23.6485 12.261 23.8618 12.7669C24.0801 13.2808 24.2468 13.82 24.3593 14.3684C24.4747 14.929 24.5335 15.5065 24.5335 16.084ZM12.8904 9.50188C10.8582 10.4602 9.34143 12.33 8.86848 14.5836C9.0606 14.5852 12.0974 14.6235 15.5963 13.6952C14.335 11.4575 12.9875 9.63132 12.8904 9.50188ZM16.2001 14.8158C12.4479 15.9375 8.84724 15.8568 8.71808 15.8518C8.71597 15.93 8.71223 16.0058 8.71223 16.084C8.71223 17.9534 9.41851 19.6577 10.5794 20.9464C10.5769 20.9426 12.5712 17.4096 16.5039 16.1398C16.5989 16.1081 16.6956 16.0798 16.7914 16.0524C16.6085 15.6388 16.4089 15.2244 16.2001 14.8158ZM20.8125 10.6224C19.5295 9.49272 17.8448 8.80746 15.9997 8.80746C15.4076 8.80746 14.833 8.87904 14.2825 9.01134C14.3917 9.15783 15.7605 10.9711 17.0068 13.2562C19.7566 12.2269 20.7945 10.649 20.8125 10.6224ZM17.2882 17.2582C17.2719 17.2636 17.2557 17.2682 17.2398 17.274C12.9401 18.7708 11.536 21.7873 11.5208 21.8202C12.7579 22.7809 14.3097 23.3605 15.9998 23.3605C17.009 23.3605 17.9703 23.1554 18.8449 22.7838C18.737 22.1481 18.3136 19.9195 17.2882 17.2582ZM20.072 22.1189C21.7083 21.0163 22.8705 19.2654 23.1946 17.2374C23.0446 17.1891 21.0058 16.5446 18.6536 16.9211C19.6095 19.5442 19.9978 21.6804 20.072 22.1189ZM17.5678 14.3406C17.7369 14.6876 17.9007 15.0408 18.0519 15.3958C18.1057 15.5231 18.1582 15.6479 18.2095 15.7728C20.7129 15.4582 23.1793 15.9874 23.2847 16.0091C23.2681 14.284 22.6501 12.7008 21.6276 11.4613C21.6138 11.4808 20.445 13.1672 17.5678 14.3406Z" fill="white"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+                    <path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16.0957C0 7.25915 7.16344 0.0957031 16 0.0957031C24.8366 0.0957031 32 7.25915 32 16.0957C32 24.9323 24.8366 32.0957 16 32.0957C7.16344 32.0957 0 24.9323 0 16.0957Z" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5208 13.1008L15.5544 13.6544L14.9948 13.5866C12.9579 13.3268 11.1784 12.4455 9.66756 10.9653L8.92891 10.2309L8.73865 10.7733C8.33575 11.9822 8.59316 13.259 9.43253 14.1177C9.8802 14.5922 9.77948 14.66 9.00725 14.3776C8.73865 14.2872 8.50363 14.2194 8.48124 14.2533C8.4029 14.3324 8.6715 15.3605 8.88414 15.7673C9.17513 16.3322 9.76828 16.8859 10.4174 17.2135L10.9658 17.4734L10.3167 17.4847C9.68994 17.4847 9.66756 17.496 9.73471 17.7333C9.95854 18.4677 10.8427 19.2473 11.8276 19.5863L12.5214 19.8235L11.9171 20.1851C11.0218 20.7048 9.96973 20.9986 8.91772 21.0212C8.41409 21.0325 8 21.0777 8 21.1116C8 21.2246 9.36538 21.8573 10.16 22.1059C12.5438 22.8403 15.3753 22.5239 17.5017 21.2698C19.0126 20.3772 20.5235 18.6033 21.2286 16.8859C21.6091 15.9707 21.9896 14.2985 21.9896 13.4963C21.9896 12.9765 22.0232 12.9087 22.6499 12.2873C23.0192 11.9257 23.3662 11.5303 23.4333 11.4173C23.5452 11.2026 23.534 11.2026 22.9633 11.3947C22.012 11.7337 21.8777 11.6885 22.3477 11.18C22.6947 10.8185 23.1088 10.1631 23.1088 9.97106C23.1088 9.93717 22.9409 9.99366 22.7506 10.0953C22.5492 10.2083 22.1015 10.3778 21.7658 10.4795L21.1614 10.6716L20.613 10.2987C20.3108 10.0953 19.8856 9.86937 19.6617 9.80158C19.0909 9.6434 18.218 9.666 17.7032 9.84678C16.3042 10.3552 15.4201 11.6659 15.5208 13.1008Z" fill="white"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+                    <path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16.0957C0 7.25915 7.16344 0.0957031 16 0.0957031C24.8366 0.0957031 32 7.25915 32 16.0957C32 24.9323 24.8366 32.0957 16 32.0957C7.16344 32.0957 0 24.9323 0 16.0957Z" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.6679 10.5952C23.4022 10.7967 23.9805 11.3905 24.1768 12.1445C24.5335 13.511 24.5335 16.3623 24.5335 16.3623C24.5335 16.3623 24.5335 19.2135 24.1768 20.5802C23.9805 21.3342 23.4022 21.9279 22.6679 22.1295C21.3371 22.4957 16.0001 22.4957 16.0001 22.4957C16.0001 22.4957 10.6632 22.4957 9.3323 22.1295C8.59795 21.9279 8.01962 21.3342 7.82335 20.5802C7.4668 19.2135 7.4668 16.3623 7.4668 16.3623C7.4668 16.3623 7.4668 13.511 7.82335 12.1445C8.01962 11.3905 8.59795 10.7967 9.3323 10.5952C10.6632 10.229 16.0001 10.229 16.0001 10.229C16.0001 10.229 21.3371 10.229 22.6679 10.5952ZM14.4001 13.9623V19.2956L18.6668 16.629L14.4001 13.9623Z" fill="white"/>
+                </svg>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
